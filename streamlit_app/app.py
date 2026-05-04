@@ -38,7 +38,7 @@ from streamlit_app.config import (
 # Настройка страницы
 # ---------------------------------------------------------------------------
 st.set_page_config(
-    page_title="Image Classifier",
+    page_title="Классификация изображений",
     page_icon="🖼️",
     layout="wide",
 )
@@ -151,10 +151,10 @@ def display_results(result: dict) -> None:
     df["Вероятность (%)"] = (df["Вероятность"] * 100).round(2)
     st.dataframe(df[["Класс", "Вероятность (%)"]], use_container_width=True, hide_index=True)
 
-    # Столбчатая диаграмма
-    st.subheader("📈 График распределения вероятностей")
-    chart_df = df.set_index("Класс")["Вероятность"]
-    st.bar_chart(chart_df)
+    # # Столбчатая диаграмма
+    # st.subheader("📈 График распределения вероятностей")
+    # chart_df = df.set_index("Класс")["Вероятность"]
+    # st.bar_chart(chart_df)
 
 
 # ---------------------------------------------------------------------------
