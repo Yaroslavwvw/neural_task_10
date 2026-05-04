@@ -75,7 +75,7 @@ def preprocess_flower_image(image_bytes: bytes) -> np.ndarray:
     # Масштабирование до нужного размера
     image = image.resize((224, 224))
     # Преобразование в массив и нормализация
-    array = np.array(image, dtype=np.float32) / 255.0
+    array = np.array(image, dtype=np.float32)
     # Добавление измерения batch
     array = array.reshape(1, 224, 224, 3)
     return array

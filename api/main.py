@@ -56,7 +56,13 @@ async def lifespan(app: FastAPI):
 
     # --- Загрузка модели для цветов ---
     if os.path.exists(FLOWER_MODEL_PATH):
-        models["flower"] = tf.keras.models.load_model(FLOWER_MODEL_PATH)
+        from tensorflow.keras.applications.resnet50 import preprocess_input
+
+        models["flower"] = tf.keras.models.load_model(
+            FLOWER_MODEL_PATH,
+            custom_objects={"preprocess_input": preprocess_input},
+            safe_mode=False
+        )
     else:
         models["flower"] = None
 
