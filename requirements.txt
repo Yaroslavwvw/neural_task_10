@@ -1,11 +1,17 @@
+
+# tensorflow
+
+
 fastapi
 uvicorn
 python-multipart
-tensorflow
 pillow
 numpy
+ai-edge-litert
 streamlit
 requests
 pandas
-matplotlib
 streamlit-drawable-canvas
+
+
+
