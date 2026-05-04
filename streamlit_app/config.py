@@ -5,10 +5,10 @@
 
 # Базовый URL FastAPI-сервера.
 # При деплое на Render.com замените на публичный URL вашего сервиса.
-API_BASE_URL = "http://localhost:8000"
+API_BASE_URL = "https://neural-task-10.onrender.com"
 
 # Заголовок приложения
-APP_TITLE = "🖼️ Image Classification App"
+APP_TITLE = "🖼️ Классификатор цветов"
 
 # Описание приложения
 APP_DESCRIPTION = (
